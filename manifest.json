@@ -1,0 +1,34 @@
+{
+  "manifest_version": "0.3",
+  "name": "genpark-voice-vad",
+  "version": "1.0.1",
+  "description": "Energy and transcript heuristics for voice turn endpoint detection.",
+  "author": {
+    "name": "GenPark AI Engineering"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "mcp_server.py",
+    "mcp_config": {
+      "command": "python",
+      "args": [
+        "${__dirname}/mcp_server.py"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "runtimes": {
+      "python": ">=3.9"
+    }
+  }
+}

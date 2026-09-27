@@ -1,31 +1,28 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "genpark-voice-turn-taking"
-version = "1.0.0"
-description = "Deterministic zero-dependency real-time voice VAD & semantic turn-taking endpoint detector."
+name = "genpark-voice-vad"
+version = "1.0.1"
+description = "Energy and transcript heuristics for voice turn endpoint detection."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
-authors = [
-  { name = "GenPark AI Engineering", email = "engineering@genpark.ai" }
-]
-keywords = ["ai-agent", "mcp", "model-context-protocol", "zero-dependency", "python"]
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Topic :: Scientific/Engineering :: Artificial Intelligence"
-]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "GenPark AI Engineering"}]
 dependencies = []
+keywords = ["genpark", "mcp", "ai-agent", "python"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
 
 [project.urls]
-"Homepage" = "https://genpark.ai/mcp"
-"Repository" = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill"
-"Documentation" = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill#readme"
-"Bug Tracker" = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill/issues"
+Repository = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill"
+Documentation = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill#readme"
+Issues = "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill/issues"
+Homepage = "https://genpark.ai/mcp"
 
 [project.scripts]
-genpark-voice-turn-taking = "client:main"
+genpark-voice-vad = "genpark_voice_vad.server:main"
+
+[tool.setuptools.packages.find]
+include = ["genpark_voice_vad*"]
