@@ -12,7 +12,7 @@
     {
       "registryType": "mcpb",
       "identifier": "https://github.com/Alpha-Park/genpark-voice-turn-taking-endpoint-detector-skill/releases/download/v1.0.1/genpark-voice-vad.mcpb",
-      "fileSha256": "09fe3634ac0b318bf70612473dc66e5ba0dddcbb4adb8fe5f88bac7b096043f3",
+      "fileSha256": "e313a2934a4aa618a8756648026b8abf21329f5441cfda093b3ee1a469fa411c",
       "transport": {
         "type": "stdio"
       }
